@@ -1,10 +1,12 @@
 # Audio Transcription
 
-Transcribe audio files using **OpenAI's Whisper**. Output is saved to `output.txt` with timestamps.
+Transcribe audio files using Whisper.
 
 ---
 
 ## Installation
+
+You will need Python 3.8 or higher. Check your Python version: `python3 --version`
 
 ```bash
 pip install openai-whisper
@@ -16,10 +18,10 @@ brew install ffmpeg
 
 1. Convert audio to WAV (16kHz, mono):
    `ffmpeg -i audio/[audio-name].m4a -ar 16000 -ac 1 audio/[audio-name].wav`
-2. In `index.py`, replace [your-audio-name] with your desired audio filename:
+2. In `index.py`, replace [audio-name] with your desired audio filename:
 
-- line 5: `AUDIO_FILE = "audio/[your-audio-name].wav"`
-- line 52: `with open("text/[your-audio-name].txt"`
+- line 5: `AUDIO_FILE = "audio/[audio-name].wav"`
+- line 52: `with open("text/[audio-name].txt"`
 
 3. Run transcription: `python3 index.py`
 
